@@ -1,0 +1,27 @@
+Write a Java program to swap two numbers.import java.util.Scanner;
+
+public class SwapNumbers {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); // Create a Scanner object for user input
+        
+        // Input two numbers from the user
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt(); // Store the first number
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt(); // Store the second number
+
+        // Display numbers before swapping
+        System.out.println("Before swapping: num1 = " + num1 + ", num2 = " + num2);
+
+        // Swap the numbers using a temporary variable
+        int temp = num1; // Temporary variable holds the value of num1
+        num1 = num2;     // Assign num2 to num1
+        num2 = temp;     // Assign the temporary value (original num1) to num2
+
+        // Display numbers after swapping
+        System.out.println("After swapping: num1 = " + num1 + ", num2 = " + num2);
+
+        scanner.close(); // Close the scanner to release resources
+    }
+}
