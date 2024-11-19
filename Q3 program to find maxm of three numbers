@@ -1,0 +1,23 @@
+Write a Java program to find maximum of three numbers.
+
+import java.util.Scanner;
+public class MaximunOfThreeNumbers {
+    public static void main(String []args)
+    {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter three numbers:");
+        int n1=scan.nextInt();
+        int n2=scan.nextInt();
+        int n3=scan.nextInt();
+        int num=(n1>n2)?(n1>n3?n1:n2):(n2>n3?n2:n3);
+        System.out.println("Greatest among all is:"+num);
+
+    }
+    
+}
+Output:
+Enter three numbers:
+2
+4
+5
+Greatest among all is:5
