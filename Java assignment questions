@@ -1,1 +1,48 @@
 write a program to convert degree celcius to kelvand vice versa
+import java.util.Scanner; // Import the Scanner class for user input
+
+public class TemperatureConverter {
+
+    // Method to convert Celsius to Kelvin
+    public static double celsiusToKelvin(double celsius) {
+        // Formula: Kelvin = Celsius + 273.15
+        return celsius + 273.15;
+    }
+
+    // Method to convert Kelvin to Celsius
+    public static double kelvinToCelsius(double kelvin) {
+        // Formula: Celsius = Kelvin - 273.15
+        return kelvin - 273.15;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); // Create a Scanner object for input
+        
+        System.out.println("Temperature Converter: Celsius <-> Kelvin");
+        System.out.println("1: Convert Celsius to Kelvin");
+        System.out.println("2: Convert Kelvin to Celsius");
+
+        // Ask the user to choose an option
+        System.out.print("Enter your choice (1 or 2): ");
+        int choice = scanner.nextInt();
+
+        if (choice == 1) {
+            // Conversion from Celsius to Kelvin
+            System.out.print("Enter temperature in Celsius: ");
+            double celsius = scanner.nextDouble(); // Read Celsius value from user
+            double kelvin = celsiusToKelvin(celsius); // Call the method to convert
+            System.out.println("Temperature in Kelvin: " + kelvin);
+        } else if (choice == 2) {
+            // Conversion from Kelvin to Celsius
+            System.out.print("Enter temperature in Kelvin: ");
+            double kelvin = scanner.nextDouble(); // Read Kelvin value from user
+            double celsius = kelvinToCelsius(kelvin); // Call the method to convert
+            System.out.println("Temperature in Celsius: " + celsius);
+        } else {
+            // Handle invalid choice
+            System.out.println("Invalid choice! Please enter 1 or 2.");
+        }
+
+        scanner.close(); // Close the scanner to release resources
+    }
+}
