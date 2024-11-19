@@ -1,4 +1,4 @@
-write a program to convert degree celcius to kelvand vice versa
+write a program to convert temperature from degree celcius to kelvand vice versa
 import java.util.Scanner; // Import the Scanner class for user input
 
 public class TemperatureConverter {
