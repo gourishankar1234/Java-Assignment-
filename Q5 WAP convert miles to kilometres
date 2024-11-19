@@ -1,0 +1,17 @@
+Write a Java program to convert miles to kilometers
+import java.util.Scanner;
+public class miletokilo{
+    @SuppressWarnings("resource")
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the distance in mile");
+        float m = sc.nextFloat();
+        float k = (float)(m*1.609);
+        System.out.println("The distance in kilometer is :"+ k);
+        
+    }
+}
+Output:
+Enter the distance in mile
+45
+The distance in kilometer is :72.405
