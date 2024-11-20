@@ -1,0 +1,28 @@
+Write a Java program to print all multiple of 10 between a given interval.
+import java.util.Scanner;
+public class MutlipleOfTen {
+	public static void main(String []args) {
+	Scanner sc= new Scanner(System.in);
+	System.out.println("Enter the Starting Integer");
+	int a=sc.nextInt();
+	System.out.println("Enter the end");
+	int b=sc.nextInt();
+	for(int i=a;i<=b;i++)
+	{
+		if(i%10==0)
+		{
+			System.out.println(i);
+		}
+	}
+	
+
+}
+}
+Output:
+Enter the Starting Integer
+20
+Enter the end
+45
+20
+30
+40
