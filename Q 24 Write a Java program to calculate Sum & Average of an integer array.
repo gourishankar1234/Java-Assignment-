@@ -1,0 +1,38 @@
+Write a Java program to calculate Sum & Average of an integer array.
+
+import java.util.Scanner;
+
+public class SumAndAverage {
+    
+     public static void main(String []args)
+    {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter the number elements to be entered on array");
+        int n=scan.nextInt();
+        int arr[]=new int[n];
+        System.out.println("Enter the elements in array");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=scan.nextInt();
+        }
+        int sum=0;
+        for(int i=0;i<n;i++)
+        {
+            sum=arr[i]+sum;
+        }
+        System.out.println("Sum of all the elements present in given array:"+sum);
+        double average;
+        average=sum/n;
+        System.out.println("Average of the given array is:"+average);    
+        }
+    }
+Output:
+Enter the number elements to be entered on array
+4
+Enter the elements in array
+1
+2
+3
+4
+Sum of all the elements present in given array:10
+Average of the given array is:2.0
