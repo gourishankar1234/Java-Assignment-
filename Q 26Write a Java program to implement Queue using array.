@@ -1,0 +1,51 @@
+Write a Java program to implement Queue using array.( 20 Nov)
+t :12
+12 
+11 
+26. public class Queue {
+    int f,e,size ;
+    int[]queue;
+    Queue(int c ){
+        f = 0;
+        size = c;
+        e=-1;
+        queue = new int[size];
+    }
+
+    void enqueue(int data){
+        if(e==size-1){
+            System.out.println("Queue is full");
+        }
+        queue[++e]= data;
+    }
+
+   void  dequeue(){
+        if(f>e){
+            System.out.println("Queue is empty");
+            return ;
+        }
+        for(int i=0;i<e;i++){
+            queue[i]=queue[i+1];
+
+        }
+        e--;
+       
+        
+    }
+
+    void display(){
+        for(int i = f;i<=e;i++){
+            System.out.print(queue[i]+"  ");
+        }
+    }
+
+    public static void main(String[] args) {
+         Queue q = new Queue(4);
+         q.enqueue(20);
+         q.enqueue(90);
+         q.display();
+        
+    }
+}
+Output:
+20  90
