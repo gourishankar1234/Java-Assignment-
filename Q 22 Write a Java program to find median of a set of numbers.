@@ -1,0 +1,44 @@
+Write a Java program to find median of a set of numbers.
+import java.util.Scanner;
+
+public class MedianOfSetOfNumbers {
+     public static void main(String []args)
+    {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter the number elements to be entered on array");
+        int n=scan.nextInt();
+        int arr[]=new int[n];
+        System.out.println("Enter the elements in array");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=scan.nextInt();
+        }
+        int count=0;
+        for(int i=0;i<n;i++)
+            {
+                count++;
+            }
+        System.out.println(count);
+        
+
+        if(n%2!=0)
+        {
+            System.out.println("Median of the given data is:"+arr[((count+1)/2)-1]);
+        }
+        else{
+            double medianInCaseOfEvenNumberOfElements=(arr[(count/2)-1]+arr[count/2])/2.0;
+            System.out.println("Median of the given set of numbers is :"+medianInCaseOfEvenNumberOfElements);
+        }
+    
+}
+}
+Output:
+Enter the number elements to be entered on array
+4
+Enter the elements in array
+1
+2
+3
+4
+4
+Median of the given set of numbers is :2.5
