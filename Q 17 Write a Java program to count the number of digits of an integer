@@ -1,0 +1,54 @@
+ Write a Java program to count the number of digits of an integer
+
+
+import java.util.Scanner;
+
+public class NumberOfDigitsInInteger {
+
+
+    public static void main(String []args)
+    {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter Number:");
+        int n=scan.nextInt();
+        int count=0;
+        while(n!=0)
+        {
+            n=n/10;
+            count++;
+        }
+        System.out.println("Number of digits:"+count);
+    }
+    
+}
+Output:
+Enter Number:
+12345
+Number of digits:5
+19. Write a Java program to check whether a number is palindrome or not.(09 Sept)
+import java.util.Scanner;
+public class PalindromeOrNot {
+    public static void main(String []args)
+    {
+        Scanner scan=new Scanner(System.in);
+        System.out.println("Enter Number:");
+        int n=scan.nextInt();
+        String s=String.valueOf(n);
+        String s1="";
+        for(int i=(s.length()-1);i>=0;i--)
+        {
+            s1=s1+s.charAt(i);
+        }
+        
+        if(s1.equals(s))
+        {
+            System.out.println("Number is palindrome.");
+        }
+        else{
+            System.out.println("Number is not palindrome.");
+        }
+    }
+Output:
+Enter Number:
+456
+Number is not palindrome.
