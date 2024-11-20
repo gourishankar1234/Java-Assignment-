@@ -1,0 +1,12 @@
+Write Java programs for the patterns given bellow: (a) 1 2 3 4 5 6 7 8 9public class NumberPattern {
+    public static void main(String[] args) {
+        int count = 1;
+        for (int i = 1; i <= 4; i++) { // Outer loop for rows
+            for (int j = 1; j <= i; j++) { // Inner loop for columns
+                System.out.print(count + " ");
+                count++;
+            }
+            System.out.println(); // Move to the next row
+        }
+    }
+}
